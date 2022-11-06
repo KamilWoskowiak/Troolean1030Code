@@ -1,0 +1,66 @@
+# 2
+
+import random
+
+size = int(input("How large would you like the list to be? "))
+list = []
+
+while len(list) < size:
+    list.append(random.randint(-100,100))
+print(list)
+
+count = 0
+
+for x in list:
+    if x < 0 and x % 2 == 1:
+        count+=1
+print(count)
+
+
+
+# 3
+
+import random
+
+size = int(input("How large would you like the list to be? "))
+list = []
+new_list = []
+
+while len(list) < size:
+    list.append(random.randint(-100,100))
+print(list)
+
+new_list = []
+
+for x in list:
+    new_list.insert(0,x)
+print(new_list)
+
+# We can use the .reverse() method to do this problem easily, but we are doing it this way to practice loops!
+
+
+
+# 4
+
+import random
+
+size = int(input("How large would you like the list to be? "))
+list = []
+
+while len(list) < size:
+    list.append(random.randint(-100,100))
+print(list)
+
+i = 0
+while i < len(list):
+    j = i+1
+    while j < len(list):
+        if list[i] > list[j]:
+            temp = list[i]
+            list[i] = list[j]
+            list[j] = temp
+        j+=1
+    i+=1
+
+print(list)
+# We can use the .sort() method to do this problem easily, but we are doing it this way to practice loops!
